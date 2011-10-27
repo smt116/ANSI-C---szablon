@@ -1,2 +1,9 @@
 Maciej Małecki
 smt116@gmail.com
+
+Szablon programu w języku ANSI C. Stworzony do automatyzacji bardzo podstawowych czynności.
+
+Makra:
+	-> Alokowanie dynamicznych tablic.
+		Przykładowe użycie:
+			int *tablica = MALLOC(int, 10000);

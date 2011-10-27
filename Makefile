@@ -1,11 +1,11 @@
 FLAGS = -Wall
-STD = -std=c99
 
 MAIN = main
+OUTPUT = main
 LIB = lib
 
 default: obj
-	$(CC) $(STD) $(MAIN).o $(LIB).o -o $(MAIN)
+	$(CC) $(MAIN).o $(LIB).o -o $(OUTPUT)
 
 obj:
 	$(CC) $(STD) *.c -c
@@ -18,4 +18,4 @@ clean:
 	rm -f *~ *.o .*.swp
 
 veryclean: clean
-	rm -f $(MAIN) *.in *.out
+	rm -f *.in *.out $(OUTPUT)

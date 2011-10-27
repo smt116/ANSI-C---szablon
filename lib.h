@@ -7,5 +7,9 @@
 
 /* biblioteki: */
 	#include <stdio.h>
+	#include <stdlib.h>
+
+/* makra: */
+	#define MALLOC(typ, ilosc) (typ*)malloc((typ+1)*sizeof(ilosc))	
 
 #endif
