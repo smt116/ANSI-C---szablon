@@ -1,14 +1,16 @@
-FLAGS = -Wall
+FLAGS = -Wall -g
 
 MAIN = main
 OUTPUT = main
 LIB = lib
 
-default: obj
-	$(CC) $(MAIN).o $(LIB).o -o $(OUTPUT)
+default: compile clean
+
+compile: obj
+	$(CC) $(FLAGS)  $(MAIN).o $(LIB).o -o $(OUTPUT)
 
 obj:
-	$(CC) $(STD) *.c -c
+	$(CC) $(FLAGS) *.c -c
 
 $(MAIN).o: $(MAIN).c $(LIB).h
 
