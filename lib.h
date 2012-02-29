@@ -10,6 +10,6 @@
 	#include <stdlib.h>
 
 /* makra: */
-	#define MALLOC(typ, ilosc) (typ*)malloc((typ+1)*sizeof(ilosc))	
+	#define MALLOC(typ, ilosc) (typ*)malloc((ilosc)*sizeof(typ))
 
 #endif
