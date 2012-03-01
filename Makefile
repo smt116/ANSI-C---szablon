@@ -1,4 +1,4 @@
-FLAGS = -Wall -g
+FLAGS = -Wall -ggdb
 
 MAIN = main
 OUTPUT = main
