@@ -3,11 +3,12 @@ FLAGS = -Wall -ggdb
 MAIN = main
 OUTPUT = main
 LIB = lib
+LIBS = lib.o
 
 default: compile clean
 
 compile: obj
-	$(CC) $(FLAGS)  $(MAIN).o $(LIB).o -o $(OUTPUT)
+	$(CC) $(FLAGS)  $(MAIN).o $(LIBS) -o $(OUTPUT)
 
 obj:
 	$(CC) $(FLAGS) *.c -c
