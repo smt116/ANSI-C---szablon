@@ -1,21 +1,25 @@
+# Maciej Małecki
+# smt116@gmail.com
+
+# Flagi dla kompilatora
 FLAGS = -Wall -ggdb
+# Nazwa programu wyjsciowego
+OUTPUT = app
+# Nazwa plikow obiektowych
+OBJS = main.o lib.o
+# Nazwa plikow naglowkowych
+LIBS = lib.h
 
-MAIN = main
-OUTPUT = main
-LIB = lib
-LIBS = lib.o
-
+# Domyslna regola
 default: compile clean
 
-compile: obj
-	$(CC) $(FLAGS)  $(MAIN).o $(LIBS) -o $(OUTPUT)
+# Kompilacja
+compile: $(OBJS) $(LIBS)
+	$(CC) $(FLAGS) $(OBJS) -o $(OUTPUT)
 
-obj:
-	$(CC) $(FLAGS) *.c -c
-
-$(MAIN).o: $(MAIN).c $(LIB).h
-
-$(LIB).o: $(LIB).c $(LIB).h
+# Regula (pattern)
+%.o: %.c $(LIBS)
+	$(CC) $(FLAGS) -c $<
 
 clean:
 	rm -f *~ *.o .*.swp
