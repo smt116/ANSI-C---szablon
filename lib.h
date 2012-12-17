@@ -12,4 +12,6 @@
 /* makra: */
 	#define MALLOC(typ, ilosc) (typ*)malloc((ilosc)*sizeof(typ))
 
+/* funkcje: */
+
 #endif
